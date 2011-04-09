@@ -25,7 +25,7 @@ class Plugin_Twitter extends Plugin
 		$html = <<<HTML
 <ul id="twitter_update_list"><li>&nbsp;</li></ul>
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script> 
-<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/$username.json?callback=twitterCallback2&amp;count=$count"></script>
+<script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/$username.json?callback=twitterCallback2&amp;count=$count&amp;include_rts=true"></script>
 HTML;
 		
 		return $html;
